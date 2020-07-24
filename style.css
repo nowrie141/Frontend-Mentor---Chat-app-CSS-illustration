@@ -10,18 +10,18 @@ body{
 }
 
 .background-shape{
-  width: 500px;
+  width: 400px;
   height: 1000px;
   background: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
   z-index: -1;
   position: absolute;
   top: -500px;
   left: -290px;
-  border-bottom-right-radius: 50%;
+  border-bottom-right-radius: 500px;
 }
 
-.phone{
-  margin: 30px auto 0px auto;
+.phone-container .phone{
+  margin: 20px auto 0px auto;
   width: 300px;
   height: 640px;
   max-width: 300px;
@@ -36,13 +36,13 @@ body{
   background-color: white;
 }
 
-.phone .contact{
+.phone-container .phone .contact{
   background: linear-gradient(to right,hsl(264, 100%, 61%) 0%,hsl(293, 100%, 63%) 100%);
   border-radius: 15px 15px 5px 5px;
   color: white;
 }
 
-.phone .contact .notch{
+.phone-container .phone .contact .notch{
   margin: 0 auto;
   width: 175px;
   height: 20px;
@@ -51,12 +51,12 @@ body{
   border-bottom-left-radius: 25px;
 }
 
-.phone .contact .contact-info{
+.phone-container .phone .contact .contact-info{
   padding: 10px 0;
   display: flex;
 }
 
-.phone .contact .contact-info .go-back{
+.phone-container .phone .contact .contact-info .go-back{
   margin: auto 5px auto 15px;
   font-size: 25px;
   font-weight: bold;
@@ -64,52 +64,54 @@ body{
   flex: 1;
 }
 
-.phone .contact .contact-info .contact-data{
+.phone-container .phone .contact .contact-info .contact-data{
   margin: auto 0px auto 3px;
   flex-direction: column;
   flex: 10;
 }
 
-.phone .contact .contact-info .contact-data .contact-name{
+.phone-container .phone .contact .contact-info .contact-data .contact-name{
   font-size: 15px;
   font-weight: bold;
 }
 
-.phone .contact .contact-info .contact-data .contact-status{
+.phone-container .phone .contact .contact-info .contact-data .contact-status{
   font-size: 12px;
   color: hsl(276, 100%, 81%);
 }
 
-.phone .contact .contact-info .dots{
+.phone-container .phone .contact .contact-info .dots{
   color: white;
   margin: auto 0;
   flex: 1;
 }
 
-.phone .contact .contact-info .dots::after{
+.phone-container .phone .contact .contact-info .dots::after{
   content: '\2807';
   font-size: 15px;
 }
 
-.phone .contact .contact-info p{
+.phone-container .phone .contact .contact-info p{
   margin: 2px 10px 1px 10px;
 }
 
-.phone .contact  .contact-info img{
+.phone-container .phone .contact  .contact-info img{
   margin: auto 0;
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  max-width: 30px;
+  max-height: 30px;
   border: 2px white solid;
 }
 
-.phone .chat{
+.phone-container .phone .chat{
   padding: 10px;
   background: hsl(260, 33%, 98%);
   height: 100%;
 }
 
-.phone .chat .message{
+.phone-container .phone .chat .message{
   border-radius: 10px;
   margin-bottom: 3px;
   margin-top: 3px;
@@ -117,7 +119,7 @@ body{
   max-width: 180px;
 }
 
-.phone .chat .message.align-left{
+.phone-container .phone .chat .message.align-left{
   padding: 10px;
   float: left;
   color: hsl(276, 55%, 52%);
@@ -125,7 +127,7 @@ body{
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.phone .chat .message.align-right{
+.phone-container .phone .chat .message.align-right{
   padding: 10px;
   float: right;
   color: rgba(0, 0, 0, 0.726);
@@ -133,20 +135,20 @@ body{
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.phone .chat .message.images{
+.phone-container .phone .chat .message.images{
   float: right;
   width: 240px;
   display: flex;
 }
 
-.phone .chat .message.images img{
+.phone-container .phone .chat .message.images img{
   border-radius: 15px;
   margin-left: 5px;
   width: 40px;
   flex: 1;
 }
 
-.phone .chat .message.align-left.offer{
+.phone-container .phone .chat .message.align-left.offer{
   color: hsl(270, 20%, 96%);
   background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
@@ -154,27 +156,27 @@ body{
   width: 180px;
 }
 
-.phone .chat .message.align-left.offer .offer-value > *{
+.phone-container .phone .chat .message.align-left.offer .offer-value > *{
   display: inline-block;
 }
 
-.phone .chat .message.align-left.offer .offer-value{
+.phone-container .phone .chat .message.align-left.offer .offer-value{
   padding: 0px;
 }
 
-.phone .chat .message.align-left.offer .offer-value .check{
+.phone-container .phone .chat .message.align-left.offer .offer-value .check{
   border: 1px solid white;
   border-radius: 50%;
   width: 10px;
   height: 10px;
 }
 
-.phone .chat .message.align-left.offer .offer-text{
+.phone-container .phone .chat .message.align-left.offer .offer-text{
   color: hsl(270, 20%, 96%);
   margin-left: 5px;
 }
 
-.phone .chat .message.align-left.offer .price{
+.phone-container .phone .chat .message.align-left.offer .price{
   color: white;
   margin-right: 5px;
   margin-left: 20px;
@@ -183,11 +185,11 @@ body{
   float: right;
 }
 
-.phone .chat .send-message > *{
+.phone-container .phone .chat .send-message > *{
   display: inline-block;
 }
 
-.phone .chat .send-message{
+.phone-container .phone .chat .send-message{
   width: 100%;
   clear: both;
   background-color: white;
@@ -197,12 +199,12 @@ body{
   padding: 21x;
 }
 
-.phone .chat .send-message p{
+.phone-container .phone .chat .send-message p{
   margin-left: 10px;
   color:hsl(206, 6%, 79%);
 }
 
-.phone .chat .send-message .send-button{
+.phone-container .phone .chat .send-message .send-button{
   border-radius: 50%;
   border: none;
   width: 30px;
@@ -215,13 +217,14 @@ body{
   font-size: 16px;
 }
 
-.phone .chat .send-message .send-button span{
+.phone-container .phone .chat .send-message .send-button span{
   font-size: 20px;
 }
 
 .app-description{
   margin: 40px auto 20px auto;
   width: 300px;
+  max-width: 300px;
   text-align: center;
 }
 
@@ -233,25 +236,50 @@ body{
   color: hsl(270, 7%, 64%);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 
   .content{
-    display: flex;
     margin: auto auto;
     padding: 30px;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
   }
 
-  .phone{
-    flex: 1;
+  .phone-container{
+    max-width: 350px;
+    align-items: center;
   }
 
   .app-description{
-    padding: 100px;
-    margin: auto 0;
     text-align: left;
-    flex: 1;
+    margin: auto 0px auto 50px;
+    min-width: 200px;
+    max-width: 250px;
+    align-items: center;
   }
 
+}
 
+@media only screen and (min-width: 800px) {
+
+  .app-description{
+    margin: auto 0px auto 100px;
+    min-width: 350px;
+    max-width: 400px;
+  }
 
 }
+
+@media only screen and (min-width: 1000px) {
+
+  .background-shape{
+    position: absolute;
+    top: -400px;
+    left: 0px;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 250px;
+  }
+
+}
+
